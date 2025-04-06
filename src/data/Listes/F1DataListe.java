@@ -30,7 +30,7 @@ abstract class F1DataListe {
     private void getDataJsonObject() {
         try{
             // recuperation du json sur internet
-            URL url = new URI(this.urlString + "?limit=100000").toURL();
+            URL url = new URI(this.urlString + "?limit=150").toURL();
             HttpURLConnection con = (HttpURLConnection)url.openConnection();
 
             con.setRequestMethod("GET");
@@ -74,6 +74,10 @@ abstract class F1DataListe {
 
     public Object get(int index) {
         return this.data.get(index);
+    };
+
+    public int size() {
+        return this.data.size();
     };
 
 }
