@@ -19,6 +19,8 @@ public class GraphiqueMain extends Application {
         this.vue.fixeControlleurs(this);
         primaryStage.setTitle("Graphique");
         primaryStage.setScene(scene);
+        primaryStage.setMinWidth(250);
+        primaryStage.setMinHeight(250);
         primaryStage.show();
     }
 
